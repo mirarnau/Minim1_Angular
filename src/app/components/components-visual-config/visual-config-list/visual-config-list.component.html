@@ -58,13 +58,10 @@
                                <td> {{ config.customerName }} </td>
                                <td> {{ config.colorMode }} </td>
                                <td> {{ config.fontSize }} </td>
-                               <td>
-                                   <i [routerLink]="['/visual-config-list']" class="fa-solid fa-pen-to-square text-primary"> Edit </i>
-                               </td>
                              </tr>
                            </tbody>
                          </table>
-                         <!-- <button class="btn btn-success float-end" [routerLink]="['/list-restaurants/add-restaurant']"> ADD RESTAURANT </button> -->
+                         <button class="btn btn-success float-end" [routerLink]="['/visual-config-add']"> ADD CONFIG </button>
                          <h5 style="text-align: start; margin-top: 10px;" *ngIf="listConfigs.length == 0"> No configurations in the system yet </h5>
                       </div>
                   </div>

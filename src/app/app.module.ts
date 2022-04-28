@@ -24,7 +24,6 @@ import { RestaurantAddProfileComponent } from './components/components-restauran
 import { RestaurantAddTastesComponent } from './components/components-restaurants/restaurant-add-tastes/restaurant-add-tastes.component';
 import { RestaurantAddDishesComponent } from './components/components-restaurants/restaurant-add-dishes/restaurant-add-dishes.component';
 import { VisualConfigListComponent } from './components/components-visual-config/visual-config-list/visual-config-list.component';
-import { VisualConfigEditComponent } from './components/components-visual-config/visual-config-edit/visual-config-edit.component';
 import { VisualConfigAddComponent } from './components/components-visual-config/visual-config-add/visual-config-add.component';
 
 @NgModule({
@@ -47,7 +46,6 @@ import { VisualConfigAddComponent } from './components/components-visual-config/
     RestaurantAddTastesComponent,
     RestaurantAddDishesComponent,
     VisualConfigListComponent,
-    VisualConfigEditComponent,
     VisualConfigAddComponent,
   ],
   imports: [
