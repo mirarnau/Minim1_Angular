@@ -11,10 +11,10 @@
         <a class="list-group-item list-group-item-action bg-light" [routerLink]="['/visual-config-list']"> Visual Configs </a>
       </div>
     </div>
-
+  
     <!-- /#sidebar-wrapper -->
     <!-- Page Content -->
-
+  
     <div id="page-content-wrapper">
       <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
         <!-- <button class="btn btn-primary" id="menu-toggle"> Menu </button>
@@ -37,7 +37,43 @@
           </ul>
         </div>
       </nav>
+  
+        <div class="container mt-3">
+          <div class="row">
+              <div class="col-lg-10 offset-lg-1">
+                  <div class="card">
+                      <div class="card-body text-center">
+                          <span class="title"> CONFIGURATIONS LIST </span>
+                          <table *ngIf="listConfigs.length > 0" class="table table-striped mt-3">
+                           <thead>
+                             <tr>
+                               <th scope="col"> Customer Name </th>
+                               <th scope="col"> Color Mode </th>
+                               <th scope="col"> Font Size </th>
+                               <th scope="col"></th>
+                             </tr>
+                           </thead>
+                           <tbody>
+                             <tr *ngFor="let config of listConfigs">
+                               <td> {{ config.customerName }} </td>
+                               <td> {{ config.colorMode }} </td>
+                               <td> {{ config.fontSize }} </td>
+                               <td>
+                                   <i [routerLink]="['/visual-config-list']" class="fa-solid fa-pen-to-square text-primary"> Edit </i>
+                               </td>
+                             </tr>
+                           </tbody>
+                         </table>
+                         <!-- <button class="btn btn-success float-end" [routerLink]="['/list-restaurants/add-restaurant']"> ADD RESTAURANT </button> -->
+                         <h5 style="text-align: start; margin-top: 10px;" *ngIf="listConfigs.length == 0"> No configurations in the system yet </h5>
+                      </div>
+                  </div>
+              </div>
+          </div>
+       </div>
+  
+      </div>
+      <!-- /#page-content-wrapper -->
     </div>
-    <!-- /#page-content-wrapper -->
-</div>
-<!-- /#wrapper -->
+    <!-- /#wrapper -->
+  

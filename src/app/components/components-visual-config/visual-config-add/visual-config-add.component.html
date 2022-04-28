@@ -1,0 +1,43 @@
+<div class="container mt-3">
+    <div class="class row">
+        <div class="col-lg-10 offset-lg-1">
+            <div class="card">
+                <div class="card-body text-center">
+                    <span class="title"> ADD CONFIGURATION </span>
+                    <form class="mt-3" [formGroup]="configForm" (ngSubmit)="addConfig()">
+                        <div class="mb-3">
+                            <input type="text" formControlName="customerName" 
+                                class="form-control form-control-lg" placeholder="Customer Name">
+                            <div class="text-danger"
+                                *ngIf="configForm.get('customerName')?.hasError('required') && configForm.get('customerName')?.touched">
+                                <span>El nom del customer és obligatori</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="colorMode"
+                                class="form-control form-control-lg" placeholder="Color mode">
+                            <div class="text-danger"
+                                *ngIf="configForm.get('colorMode')?.hasError('required') && configForm.get('colorMode')?.touched">
+                                <span>El color mode és obligatori</span>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <input type="text" formControlName="fontSize"
+                                class="form-control form-control-lg" placeholder="Font size">
+                            <div class="text-danger"
+                                *ngIf="configForm.get('fontSize')?.hasError('required') && configForm.get('fontSize')?.touched">
+                                <span>El fontsize és obligatori</span>
+                            </div>
+                        </div>
+                        </div>
+                        <div class="mb-3">
+                            <button routerLink=".." class="btn btn-secondary btn-lg float-start"> BACK </button>
+                            <button routerLink="/visual-config-list" *ngIf="this._id !== null" (click)="deleteConfig()" class="btn btn-danger btn-lg float-mid"> DELETE </button>
+                            <button type="submit" [disabled]="configForm.invalid" class="btn btn-success btn-lg float-end"> CONFIRM </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

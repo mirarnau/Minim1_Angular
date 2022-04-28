@@ -23,6 +23,9 @@ import { OwnersListComponent } from './components/components-owners/owners-list/
 import { RestaurantAddProfileComponent } from './components/components-restaurants/restaurant-add-profile/restaurant-add-profile.component';
 import { RestaurantAddTastesComponent } from './components/components-restaurants/restaurant-add-tastes/restaurant-add-tastes.component';
 import { RestaurantAddDishesComponent } from './components/components-restaurants/restaurant-add-dishes/restaurant-add-dishes.component';
+import { VisualConfigListComponent } from './components/components-visual-config/visual-config-list/visual-config-list.component';
+import { VisualConfigEditComponent } from './components/components-visual-config/visual-config-edit/visual-config-edit.component';
+import { VisualConfigAddComponent } from './components/components-visual-config/visual-config-add/visual-config-add.component';
 
 @NgModule({
   declarations: [
@@ -43,6 +46,9 @@ import { RestaurantAddDishesComponent } from './components/components-restaurant
     RestaurantAddProfileComponent,
     RestaurantAddTastesComponent,
     RestaurantAddDishesComponent,
+    VisualConfigListComponent,
+    VisualConfigEditComponent,
+    VisualConfigAddComponent,
   ],
   imports: [
     BrowserModule,

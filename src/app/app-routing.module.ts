@@ -19,7 +19,8 @@ import { OwnersAddRestaurantsComponent } from './components/components-owners/ow
 import { RestaurantAddTastesComponent } from './components/components-restaurants/restaurant-add-tastes/restaurant-add-tastes.component';
 import { RestaurantAddProfileComponent } from './components/components-restaurants/restaurant-add-profile/restaurant-add-profile.component';
 import { RestaurantAddDishesComponent } from './components/components-restaurants/restaurant-add-dishes/restaurant-add-dishes.component';
-
+import { VisualConfigListComponent } from './components/components-visual-config/visual-config-list/visual-config-list.component';
+import { VisualConfigAddComponent } from './components/components-visual-config/visual-config-add/visual-config-add.component';
 // Routes
 
 const routes: Routes = [
@@ -50,6 +51,9 @@ const routes: Routes = [
   { path: 'list-restaurants/:_id/:nameTaste/edit-taste', component: RestaurantAddTastesComponent},
   { path: 'list-restaurants/:_id/add-dish', component: RestaurantAddDishesComponent},
   { path: 'list-restaurants/:_id/:nameDish/edit-dish', component: RestaurantAddDishesComponent},
+
+  { path: 'visual-config-list', component: VisualConfigListComponent},
+  { path: 'visual-config-add', component: VisualConfigAddComponent},
   
   { path: '**', redirectTo: '', pathMatch: 'full'} // In case of a wrong URL, the code redirects to the main path
 
